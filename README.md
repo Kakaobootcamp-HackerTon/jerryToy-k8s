@@ -1,26 +1,15 @@
-# krampoline-step2
+# krampoline-step4
 
 ## 소개
 
-`krampoline-step2`은 krampoline의 React 예제입니다. 
-이 저장소에서는 `create-react-app`를 사용하여 기본적인 React App을 만듭니다.
-[serve](https://www.npmjs.com/package/serve)를 이용하여 3000번 포트에서 서버를 열고 React 기본 파일을 제공합니다.
+`krampoline-step4`는 krampoline으로 여러가지 앱들을 하나의 구성으로 배포하는 시나리오를 담고 있습니다.
+이 저장소에서는 아주 간단한 mariaDB 이미지 생성과 여러가지 쿠버네티스 설정들을 담고 있습니다.
+
+프론트엔드(React) 저장소와 백엔드(Spring) 저장소를 등록하여 도커 이미지를 만듭니다.
+그리고 nginx 이미지를 가지고 와서 프론트엔드와 백엔드를 위한 프록시 서버 역활을 합니다.
+
+현재 저장소에서는 nginx와 데이터베이스의 초기 데이터를 위한 config 파일이 있습니다.
+쿠버네티스를 통해서 해당 설정들을 어떻게 하는지를 확인할 수 있습니다.
 
 
-쿠버네티스 구성은 다음과 같습니다.
-![‎크램폴린 쿠버네티스 ‎001](https://github.com/EdenKim-dev/krampoline_step2_v2/assets/108042383/b0ef60b6-cde7-466b-a6da-007f48fc797b)
-
-발급된 url에 포함된 random uid를 기반으로 사용자의 클러스터가 선택됩니다.
-클러스터 내에서 Ingress가 해당 주소를 받아서 적절한 Service에게 리다이렉트 시킵니다.
-
-## 필요 사항
-
-- 기본적인 IDE 사용법 (자세한 내용은 가이드 문서 참조)
-
-## 주의 사항
-
-- 만약 다른 서비스의 API를 사용하려고 하면 카카오의 프록시를 사용해야합니다. 해당 내용은 문의해주세요.
-- 꼭 `Dockerfile`과 `k8s` 폴더를 프로젝트에 포함시켜주세요.
-  - 프로젝트의 루트 (`/`) 위치에 포함되게 해주세요.
-- `k8s/deployment.yaml` 파일은 필히 확인하시기 바랍니다.
-- `main` 브런치에 작성해주세요.
+![image](https://github.com/MonoKim01/krampoline-step4/assets/85483855/1421cd44-8c34-4b6d-ab5e-222c9a63e4d7)
